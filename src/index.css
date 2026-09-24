@@ -1,0 +1,29 @@
+@import "tailwindcss";
+@import "@heroui/styles"; 
+
+
+@theme {
+  --color-brand: #ED5D0E;
+  --color-brand2: #2E1E15;
+   --color-brand3: #141414;
+}
+
+
+.contianer{
+    margin: auto;
+    width: 80%;
+}
+
+.btn1{
+  color: rgb(102, 100, 100);
+  transition: 0.1s ease-in-out;
+}
+
+.btn1:hover{
+  padding: 10px;
+  color: #ED5D0E;
+  border: 1px solid rgb(71, 71, 71);
+  border-radius: 10px;
+
+}
+
