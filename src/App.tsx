@@ -9,6 +9,7 @@ import Layout from './Componant/layout/Layout';
 import ArticleDetails from './Componant/Ditals/Ditals';
 import Privacy from './pages/Privacy/Privacy';
 import Terms from './pages/Terms/Terms';
+import ErrorPage from './pages/404-Page/404-Page';
 
 
 
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
       { path: "who", element: <Who /> },
       { path: "blogs/:slug", element: <ArticleDetails /> },
       { path: "Privacy", element: <Privacy /> },
-      { path: "Terms", element: <Terms /> }
+      { path: "Terms", element: <Terms /> },
+      { path: "*", element: <ErrorPage /> }
       
     ]
   }
