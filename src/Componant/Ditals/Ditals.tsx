@@ -32,11 +32,7 @@ type ParsedArticleContent = {
   sections: ArticleSection[];
 };
 
-type ArticlesData =
-  | Article[]
-  | {
-      posts?: Article[];
-    };
+
 
 function parseArticleContent(
   content: string | undefined
