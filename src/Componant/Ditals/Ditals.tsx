@@ -1,13 +1,13 @@
 import { Link, useParams } from "react-router";
 import articlesData from "../posts.json";
 
-type Author = {
+interface Author  {
   name: string;
   role: string;
   avatar: string;
 };
 
-type Article = {
+interface Article  {
   id: string | number;
   slug?: string;
   title: string;
@@ -21,13 +21,13 @@ type Article = {
   author?: Author;
 };
 
-type ArticleSection = {
+interface ArticleSection  {
   id: string;
   title: string;
   body: string;
 };
 
-type ParsedArticleContent = {
+interface ParsedArticleContent  {
   intro: string;
   sections: ArticleSection[];
 };
@@ -85,12 +85,7 @@ export default function ArticleDetails() {
     ? (articlesData as Article[])
     : ((articlesData as { posts?: Article[] })?.posts ?? []);
 
-  console.log("URL PARAM:", targetParam);
-  console.log("POSTS:", postsList);
-  console.log(
-    "SLUGS:",
-    postsList.map((post: Article) => post.slug)
-  );
+  
 
   const article = postsList.find(
     (post: Article) =>
